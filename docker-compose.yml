@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  streamlit-app:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      - STREAMLIT_SERVER_PORT=8501
+      - STREAMLIT_SERVER_HEADLESS=true
+    volumes:
+      - ../app:/app/app
+      - ../src:/app/src
+    # For development with auto-reload, add:
+    # command: streamlit run app/main.py --server.port=8501 --server.address=0.0.0.0

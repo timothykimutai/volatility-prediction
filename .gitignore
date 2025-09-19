@@ -24,3 +24,7 @@ htmlcov/
 *.log
 .env.example
 .dockerignore
+.cache/
+notebooks/.cache/
+.cache/
+notebooks/.cache/
